@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <div class="center">
+      <div class="top">
+        <img src="logo.png" alt="logo" />
+        <img class="menu" src="menu.svg" alt="menu" />
+      </div>
+    </div>
+
+    <div class="top_links"></div>
+
     <div class="top_text">
       <h1 class="bold">We Create Simple Solution</h1>
       <h1>For Your Complex Task</h1>
@@ -26,42 +35,45 @@
       <img class="background_img" src="background.png" alt="group" />
     </div>
 
-    <div class="middle_part add_margin">
-      <div class="middle_part_elem">
-        <div class="middle_part_text">
-          <h2>The Process</h2>
-          <h2 class="bold">About Our Work</h2>
-          <p>
-            Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, ea nec
-            elaboraret interpretaris, sed diceret concludaturque ndo. Verear
-            habenus sea ut. His nibh scripta in. In sea vocibus facilisis.
-          </p>
-          <p>
-            Sed vel cu paulo doctus vidasse. Iudico dicant nostrum nec an, in
-            eos ln detraxit eleifend duo, alterum iudicabit consectetuer per ad.
-          </p>
-          <a class="link_deco bright_deco" href="index.html"> Know More </a>
+    <div class="center">
+      <div class="middle_part add_margin">
+        <div class="middle_part_elem">
+          <div class="middle_part_text">
+            <h2>The Process</h2>
+            <h2 class="bold">About Our Work</h2>
+            <p>
+              Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, ea nec
+              elaboraret interpretaris, sed diceret concludaturque ndo. Verear
+              habenus sea ut. His nibh scripta in. In sea vocibus facilisis.
+            </p>
+            <p>
+              Sed vel cu paulo doctus vidasse. Iudico dicant nostrum nec an, in
+              eos ln detraxit eleifend duo, alterum iudicabit consectetuer per
+              ad.
+            </p>
+            <a class="link_deco bright_deco" href="index.html"> Know More </a>
+          </div>
+          <div class="middle_part_pic">
+            <img src="group1.png" alt="group" />
+          </div>
         </div>
-        <div class="middle_part_pic">
-          <img src="group1.png" alt="group" />
-        </div>
-      </div>
-      <div class="middle_part_elem left">
-        <div class="middle_part_second middle_part_text">
-          <h2>We are here to</h2>
-          <h2><span class="bold">always help</span> you</h2>
-          <p>
-            Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, ea nec
-            elaboraret interpretaris, sed diceret concludaturque no. Verear
-            habenus sea ut. His nibh scripta in. In sea vocibus facilisis.
-          </p>
-          <p>
-            Sed vel cu paulo doctus vidasse. Iudico dicant nostrum nec an, in
-            eos ln detraxit eleifend duo, alterum iudicabit consectetuer per.
-          </p>
-        </div>
-        <div class="middle_part_pic">
-          <img src="group2.png" alt="group" />
+        <div class="middle_part_elem left">
+          <div class="middle_part_second middle_part_text">
+            <h2>We are here to</h2>
+            <h2><span class="bold">always help</span> you</h2>
+            <p>
+              Lorem ipsum dolor sit amet, vel accumsan liberavisse ex, ea nec
+              elaboraret interpretaris, sed diceret concludaturque no. Verear
+              habenus sea ut. His nibh scripta in. In sea vocibus facilisis.
+            </p>
+            <p>
+              Sed vel cu paulo doctus vidasse. Iudico dicant nostrum nec an, in
+              eos ln detraxit eleifend duo, alterum iudicabit consectetuer per.
+            </p>
+          </div>
+          <div class="middle_part_pic">
+            <img src="group2.png" alt="group" />
+          </div>
         </div>
       </div>
     </div>
@@ -185,34 +197,55 @@
         <h2 class="bold">Lets Get In Touch Now</h2>
       </div>
       <div class="contact_element_cont">
-        <div class="contact_element">
+        <form class="contact_element">
           <div class="names">
             <div class="names_elements">
               <label for="fname">First Name</label>
-              <input id="fname" type="text" placeholder="Robert Lee" />
+              <input
+                id="fname"
+                name="fname"
+                type="text"
+                placeholder="Robert Lee"
+              />
             </div>
             <div class="names_elements">
               <label for="lname">Last Name</label>
-              <input id="lname" type="text" placeholder="Anderson" />
+              <input
+                id="lname"
+                name="lname"
+                type="text"
+                placeholder="Anderson"
+                required
+              />
             </div>
           </div>
           <label for="mail">Your Email Address</label>
-          <input id="mail" type="text" placeholder="anderson@mail.com" />
+          <input
+            id="mail"
+            name="mail"
+            type="email"
+            placeholder="anderson@mail.com"
+          />
           <label for="problem">Which Related Problem Are You Facing?</label>
-          <select id="problem">
+          <select id="problem" name="problem">
             <option value="">Select One</option>
-            <option value="australia">Problem 1</option>
-            <option value="canada">Problem 2</option>
-            <option value="usa">Problem 3</option>
+            <option value="Fst Problem">Problem 1</option>
+            <option value="Scnd Problem">Problem 2</option>
+            <option value="Thrd Problem">Problem 3</option>
           </select>
           <label for="message">Type Your Message</label>
           <textarea
             id="message"
+            name="message"
             placeholder="Please write your message here"
           ></textarea>
-          <a class="link_deco bright_deco small_link" href="#">Send</a>
-        </div>
+          <button class="link_deco bright_deco submit_button" type="button">
+            Send
+          </button>
+        </form>
       </div>
     </div>
+
+    <script src="functions.js"></script>
   </body>
 </html>

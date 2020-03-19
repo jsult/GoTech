@@ -49,6 +49,30 @@ img {
   font-weight: 600;
 }
 
+.top {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 90vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top_links {
+    display: none;
+    margin-left: 10vw;
+    width: 90vw;
+    height: 90vh;
+    background-color: #A174DB;
+    position: fixed;
+    z-index: 3;
+}
+
+
+
+.menu {
+    width: 40px;
+}
+
 .link_deco {
   width: 100px;
   height: 70px;
@@ -238,8 +262,8 @@ img {
 }
 
 .owning {
-    padding: 0 5px;
-    text-align: center;
+  padding: 0 5px;
+  text-align: center;
 }
 
 @media (min-width: 850px) {
@@ -307,21 +331,21 @@ img {
 
 .contact_element_cont {
   width: 90%;
-  height: 450px;
+  height: 75%;
   border-radius: 5px;
   background-color: white;
 }
 
 .contact_element {
-    padding: 0 5px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+  padding: 0 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
-.small_link {
-    height: 35px;;
+.submit_button {
+  height: 50px;
 }
 
 #fname,
@@ -348,6 +372,10 @@ img {
 }
 
 input[type="text"] {
+  padding: 0 10px;
+}
+
+input[type="email"] {
   padding: 0 10px;
 }
 
@@ -380,10 +408,9 @@ textarea {
     flex-direction: column;
   }
 
-  .small_link {
-    width: 40px;
+  .submit_button {
+    width: 80px;
   }
- 
 }
 
 .add_margin {
