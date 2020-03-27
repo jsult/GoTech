@@ -43,10 +43,14 @@ function show() {
 function openMenu() {
   open = !open;
   if (open) {
+    window.addEventListener('scroll', noScroll);
     bar.style.display = "unset";
-    menu.style.position = "fixed";
-    menu.style.marginLeft = "85vw";
   } else {
+    window.removeEventListener('scroll', noScroll);
     bar.style.display = "none";
   }
 }
+
+function noScroll() {
+    window.scrollTo(0, 0);
+  }

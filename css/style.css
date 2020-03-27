@@ -35,6 +35,12 @@ p {
   font-size: large;
 }
 
+hr {
+  border-style: solid;
+  border-color: white;
+  width: 100%;
+}
+
 @media (min-width: 850px) {
   p {
     font-size: small;
@@ -57,20 +63,111 @@ img {
     justify-content: space-between;
 }
 
+@media (min-width: 850px) {
+  .top {
+    display: none;
+  }
+}
+
 .top_links {
     display: none;
     margin-left: 10vw;
     width: 90vw;
-    height: 90vh;
+    height: 85vh;
     background-color: #A174DB;
     position: fixed;
     z-index: 3;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90%;
+}
 
+.links a {
+  margin-left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+.search_field {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2px;
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #e6b3ff;
+  width: 95%;
+  height: 10%;
+  color: #c2c2c2;
+  font-size: 20px;
+}
 
 .menu {
     width: 40px;
+}
+
+.top_cont {
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .top_cont {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .link_pressed {
+    color: #a174db;
+    position: relative;
+  }
+
+
+.link_pressed::after {
+  background-color: #a174db;
+  border-radius: 50%;
+  left: 0;
+  content: "";
+  height: 5px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 5px;
+  margin: auto;
+}
+}
+
+.top_desk {
+  min-width: 1200px;
+  max-width: 1500px;
+  height: 75px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: small;
+}
+
+
+.top_links_desc {
+  width: 500px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search_field_desk {
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px;
+  border-color: #e6b3ff;
+  width: 200px;
+  height: 30px;
+  color: #c2c2c2;
 }
 
 .link_deco {
@@ -371,10 +468,7 @@ img {
   font-size: small;
 }
 
-input[type="text"] {
-  padding: 0 10px;
-}
-
+input[type="text"],
 input[type="email"] {
   padding: 0 10px;
 }
