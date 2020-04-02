@@ -56,11 +56,11 @@ img {
 }
 
 .top {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 90vw;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: 850px) {
@@ -70,13 +70,13 @@ img {
 }
 
 .top_links {
-    display: none;
-    margin-left: 10vw;
-    width: 90vw;
-    height: 85vh;
-    background-color: #A174DB;
-    position: fixed;
-    z-index: 3;
+  display: none;
+  margin-left: 10vw;
+  width: 90vw;
+  height: 85vh;
+  background-color: #a174db;
+  position: fixed;
+  z-index: 3;
 }
 
 .links {
@@ -108,7 +108,7 @@ img {
 }
 
 .menu {
-    width: 40px;
+  width: 40px;
 }
 
 .top_cont {
@@ -127,19 +127,18 @@ img {
     position: relative;
   }
 
-
-.link_pressed::after {
-  background-color: #a174db;
-  border-radius: 50%;
-  left: 0;
-  content: "";
-  height: 5px;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  width: 5px;
-  margin: auto;
-}
+  .link_pressed::after {
+    background-color: #a174db;
+    border-radius: 50%;
+    left: 0;
+    content: "";
+    height: 5px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 5px;
+    margin: auto;
+  }
 }
 
 .top_desk {
@@ -152,7 +151,6 @@ img {
   margin-bottom: 30px;
   font-size: small;
 }
-
 
 .top_links_desc {
   width: 500px;
@@ -477,6 +475,10 @@ textarea {
   padding: 0 10px;
 }
 
+.red_field {
+  border: 2px solid red;
+}
+
 @media (min-width: 850px) {
   .contact_element_cont {
     width: 50%;
@@ -509,4 +511,86 @@ textarea {
 
 .add_margin {
   margin-bottom: 50px;
+}
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  width: 90%;
+  height: 85%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  top: 10vh;
+  left: 5%;
+  overflow: scroll;
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .modal {
+    width: 60%;
+    height: 80%;
+    left: 20%;
+  }
+}
+.modal.visible {
+  display: block;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+.modal_content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+#centered_elem {
+  align-self: center;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.confirm_button {
+  width: 85px;
+  height: 45px;
+  font-size: large;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+#cancel_button {
+  border-color: #a174db;
+  color: #a174db;
+  background-color: white;
+}
+
+#yes_button {
+  background-color: #49be55;
+  color: white;
+}
+
+.confirmation_buttons {
+  width: 100%;
+  height: 25vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
